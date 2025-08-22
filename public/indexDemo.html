@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Fullstack App</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Frontend Served by Express</h1>
+
+  <!-- Hello API -->
+  <button onclick="callAPI()">Call Backend API</button>
+  <p id="response"></p>
+
+  <!-- Time API -->
+  <button onclick="callAPITime()">Call Backend API Time</button>
+  <p id="output"></p>
+
+  <!-- Voice Input -->
+  <button onclick="startListening()">🎤 Speak</button>
+  <p id="voiceInput"></p>
+
+  <!-- Gemini API -->
+  <div>
+    <input type="text" id="geminiInput" placeholder="Ask Question!" />
+    <button onclick="getGemini()">Ask Gemini</button>
+  </div>
+  <p id="geminiOutput"></p>
+</body>
+</html>

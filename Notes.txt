@@ -1,0 +1,26 @@
+Q: require vs import
+A: * Both are used to load libraries/modules in Node.js, but:
+    - require → Old system (CommonJS).
+        eg: const express = require("express");
+    - import → New system (ES Modules, aka ESM).
+        eg: import express from "express";
+    
+   * Most of the new APIs has been written based on 'import' style so be careful
+
+-----------------------------------------------------------------------------------
+
+Q: Plan for adding speech input (your voice) and response (Gemini’s answer):
+A: Step 1: Capture Your Voice in Browser
+            - We’ll use the Web Speech API (SpeechRecognition) to record your speech.
+            - It will convert your voice into text.
+   Step 2: Send Text to Gemini API
+            - Once your speech is converted into text, we’ll send that text to your backend (/api/gemini).
+            - Backend will forward it to Gemini and get the AI’s response.
+   Step 3: Speak the Response
+            - We’ll use the SpeechSynthesis API (built into browsers) to convert Gemini’s response back into speech.
+            - So you’ll hear the bot talk back to you.
+   
+   You Speak → Browser converts to text → Send to Gemini → Gemini replies → Browser speaks back
+
+-----------------------------------------------------------------------------------
+
